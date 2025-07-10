@@ -69,3 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Dynamic Year in Footer
   document.getElementById('current-year').textContent = new Date().getFullYear();
 });
+// Responsive Navbar Toggle
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggleButton.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+});
