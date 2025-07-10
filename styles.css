@@ -297,6 +297,110 @@ h2::after {
   text-decoration: underline;
 }
 
+/* Publications Section */
+#publications {
+  background-color: var(--pale-pink);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 3rem;
+}
+
+#publications h2 {
+  color: var(--pale-pink);
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+#publications h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background-color: var(--dusty-rose);
+}
+
+.experience-card {
+  background-color: var(--burgundy);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid var(--dusty-rose);
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.experience-card h3 {
+  color: var(--pale-pink);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.experience-date {
+  display: block;
+  color: var(--dusty-rose);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.experience-card p {
+  color: var(--pale-pink);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.experience-card a {
+  color: white ;
+  background-color: var(--deep-purple);
+  text-decoration: underline;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 1rem;
+  border-bottom: 2px solid transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 2px solid var(--dusty-rose);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.experience-card a:hover {
+  color: var(--deep-purple);
+  background-color: var(--dusty-rose);
+  border-color: var(--dusty-rose);
+/* border-bottom-color: var(--dusty-rose); */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  #publications {
+    padding: 1.5rem;
+  }
+  
+  .experience-card {
+    padding: 1.2rem;
+  }
+  
+  .experience-card h3 {
+    font-size: 1.1rem;
+  }
+}
+
 /* Footer */
 .footer {
   text-align: center;
