@@ -91,6 +91,39 @@ html {
   color: white;
   background: linear-gradient(rgba(54, 1, 63, 0.7), rgba(27, 1, 32, 0.7)), 
               url('images/herosection.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;            
+}
+.experience-highlight {
+  position: absolute;
+  right: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(179, 118, 134, 0.9); /* dusty rose with transparency */
+  color: var(--pale-pink);
+  background: radial-gradient(circle, 
+            var(--dusty-rose) 0%, 
+            var(--burgundy) 100%);
+  width: 180px;
+  height: 180px;
+  padding: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  border-left: 3px solid var(--pale-pink);
+  line-height: 1.4;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  animation: pulse 6s infinite alternate, 
+             float 8s ease-in-out infinite;
 }
 
 .hero h1 {
@@ -454,6 +487,74 @@ h2::after {
   .certifications-list {
     grid-template-columns: 1fr;
   }
+}
+
+@media screen and (max-width: 992px) {
+  .experience-highlight {
+    position: static;
+    transform: none;
+    margin-top: 2rem;
+    max-width: 100%;
+    animation: fadeInUp 0.8s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .experience-highlight {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+  .experience-highlight {
+    width: 160px;
+    height: 160px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .experience-highlight {
+    position: static;
+    transform: none;
+    margin: 2rem auto;
+    width: 150px;
+    height: 150px;
+    animation: pulse 6s infinite alternate;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .experience-highlight {
+    width: 130px;
+    height: 130px;
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+}
+/* Pulsing glow animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(179, 118, 134, 0.7); }
+  100% { box-shadow: 0 0 0 15px rgba(179, 118, 134, 0); }
+}
+
+/* Subtle floating effect */
+@keyframes float {
+  0%, 100% { transform: translateY(-50%) rotate(0deg); }
+  50% { transform: translateY(-55%) rotate(2deg); }
 }
 
 /* Animation for typing effect */
